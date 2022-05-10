@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Motors Mutual</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" crossorigin="anonymous">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/icco.png" type="image/png">
+</head>
+<body>
+
+	<header class="header">
+		<button class="nav-toggle" type="button">
+			<span class="nav-toggle__item">menu</span>
+		</button>
+		<div class="header__logo">mm</div>
+		<nav class="nav">
+			<a href="#" class="nav__link" data-scroll='#intro'>Главная</a>
+			<a href="#" class="nav__link" data-scroll='#services'>Услуги</a>
+			<a href="#" class="nav__link" data-scroll='#autopark'>Автопарк</a>
+			<a href="#" class="nav__link" data-scroll='#rules'>Условия</a>
+			<a href="#" class="nav__link" data-scroll='#contact'>Контакты</a>
+		</nav>
+		<div class="header__icons">
+			<img class="header__icon" src="img/telegram.png" alt="">
+			<img class="header__icon" src="img/twitter.png" alt="">
+		</div>
+	</header>
+
+	<div id="hidden-menu" class="focused">
+			<a href="#" class="nav__link" data-scroll='#intro'>Главная</a>
+			<a href="#" class="nav__link" data-scroll='#services'>Услуги</a>
+			<a href="#" class="nav__link" data-scroll='#autopark'>Автопарк</a>
+			<a href="#" class="nav__link" data-scroll='#rules'>Условия</a>
+			<a href="#" class="nav__link" data-scroll='#contact'>Контакты</a>
+	</div>
+
+
+	<section class="modal hidden" id="bookNow">
+		<div class="modal__container">
+			<h2 class="section__title">Забронируйте автомобиль прямо сейчас!</h2>
+			<div class="contact__form">
+				<input class="contact__input" type="text" placeholder="Ваше имя">
+				<input class="contact__input" type="text" placeholder="E-mail">
+				<input class="contact__input" type="text" placeholder="Страна">
+				<textarea class="modal__area" placeholder="Пожелания"></textarea>
+			</div>
+			<div class="modal__dop">
+				<label class="modal__service">
+					<input class="modal__check" type="checkbox"> Личный водитель
+				</label>
+				<label class="modal__service">
+					<input class="modal__check" type="checkbox"> Встреча в аэропорту
+				</label>
+				<label class="modal__service">
+					<input class="modal__check" type="checkbox"> Подача автомобиля по адресу
+				</label>
+			</div>
+			<button class="btn btn__modal" type="submit" id="send">Отправить</button>
+			<button class="modal__close"><img class="modal__close--img" src="img/close.png" alt=""></button>
+		</div>
+	</section>
+
+	<section class="modal hidden" id="haveQ">
+		<div class="modal__container">
+			<h2 class="section__title">Есть вопросы?</h2>
+			<div class="contact__form">
+				<input class="contact__input" type="text" placeholder="Ваше имя">
+				<input class="contact__input" type="text" placeholder="E-mail">
+				<textarea class="modal__area" placeholder="Ваш вопрос"></textarea>
+			</div>
+			<button class="btn btn__modal" type="submit" id="send">Отправить</button>
+			<button class="modal__close"><img class="modal__close--img" src="img/close.png" alt=""></button>
+		</div>
+	</section>
+
+
+	<div class="intro" id="intro">
+		<div class="intro__lines">
+			<h1 class="intro__title" data-aos="fade-right"  data-aos-delay="400" data-aos-duration="900">Аренда автомобилей премиум класа в Италии</h1>
+			<h2 class="intro__subtitle" data-aos="fade-right"  data-aos-delay="800" data-aos-duration="900" data-aos-offset="0">У нас - только мощные и элегантные автомобили по доступным ценам</h2>
+		</div>
+	</div>
+
+	<section class="section section__services" id="services">
+		<h2 class="section__title">Предоставляемые услуги <i class="fas fa-hand-sparkles"></i></h2>
+		<div class="services__container">
+			<div class="services__item">
+				<img class="services__img" src="img/car-key.png" alt="">
+				<h4 class="services__subtitle">Аренда автомобилей</h4>
+				<p class="services__desc">Motors Mutual представляет широкий выбор элитных автомобилей на любой вкус, сроком аренды от 1 до 30 дней</p>
+			</div>
+			<div class="services__item">
+				<img class="services__img" src="img/driver.png" alt="">
+				<h4 class="services__subtitle">Личный водитель</h4>
+				<p class="services__desc">Мы предоставляем возможность иметь личного водителя в арендуемом автомобиле, который отвезет вас в любую точку Италии</p>
+			</div>
+			<div class="services__item">
+				<img class="services__img" src="img/map.png" alt="">
+				<h4 class="services__subtitle">Встреча в аэропорту</h4>
+				<p class="services__desc">Сразу по прибытию в аэропорт вас встретит наш представитель и подаст автомобиль прямо в аэропорт</p>
+			</div>
+			<div class="services__item">
+				<img class="services__img" src="img/planemap.png" alt="">
+				<h4 class="services__subtitle">Подача автомобиля по адресу</h4>
+				<p class="services__desc">Хотите что бы забронированый автомобиль подали в указанную точку? Свяжитесь с нами и представитель подаст авто по указанному адресу</p>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section section__sale">
+		<div class="sale__container">
+			<div class="sale__img"><img src="img/porsche-918-spyder-forsale.jpg" alt=""></div>
+			<div class="sale__content" data-aos="zoom-in" data-aos-duration="1200" data-aos-offset="200">
+				<div class="sale__offer">
+				<h3 class="sale__title">Porsche 918 spyder</h3>
+				<h4 class="sale__ban">Стоимость аренды снижена на 50%</h4>
+				<p class="sale__text">Гибридный гиперкар с монококом, состоящим полностью из углепластика,
+					 заставит вас влюбиться в этот автомобиль с первого взгляда. Вы сможете быстро и комфортно
+					 преодолевать большие дистанции за котороткое время, благодаря впечатляющим характеристикам гиперкара.
+				</p>
+				<p class="sale__subtitle">Не упустите возможность!</p>
+				<button class="btn btn__book" id="book">забронировать</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section__storage" id="autopark">
+		<h2 class="section__title">Автопарк <i class="fas fa-cogs"></i></h2>
+		<div class="storage">
+			<div class="storage__container">
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/BMW i8 Roadster.jpg" alt="">
+					<p class="storage__name">BMW i8 Roadster</p>
+					<p class="storage__price">640 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/BMW Z4.jpg" alt="">
+					<p class="storage__name">BMW Z4</p>
+					<p class="storage__price">315 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Ferrari California T.jpg" alt="">
+					<p class="storage__name">Ferrari California T</p>
+					<p class="storage__price">1380 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+			</div>
+
+			<div class="storage__container">
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Ferrari Portofino.jpg" alt="">
+					<p class="storage__name">Ferrari Portofino</p>
+					<p class="storage__price">1260 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Lamborghini Centenario.jpg" alt="">
+					<p class="storage__name">Lamborghini Centenario</p>
+					<p class="storage__price">2100 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Lexus LC500.jpg" alt="">
+					<p class="storage__name">Lexus LC500</p>
+					<p class="storage__price">340 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+			</div>
+
+			<div class="storage__container">
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Porsche 918 Spyder.jpg" alt="">
+					<p class="storage__name">Porsche 918 Spyder</p>
+					<p class="storage__price"><span class="storage__sale">1020 USD</span> 510 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Tesla Roadster.jpg" alt="">
+					<p class="storage__name">Tesla Roadster</p>
+					<p class="storage__price">500 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Porsche 911 Turbo S.jpg" alt="">
+					<p class="storage__name">Porsche 911 Turbo S</p>
+					<p class="storage__price">980 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+			</div>
+
+			<div class="storage__container">
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/maserati ghibli.jpg" alt="">
+					<p class="storage__name">Maserati Ghibli</p>
+					<p class="storage__price">1145 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Ford Mustang GT 2010.jpg" alt="">
+					<p class="storage__name">Ford Mustang GT 2010</p>
+					<p class="storage__price">830 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/bugatti veyron super sport.jpg" alt="">
+					<p class="storage__name">Bugatti Veyron Super Sport</p>
+					<p class="storage__price">2900 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+			</div>
+
+			<div class="storage__container">
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Lamborghini Huracan LP510-4.jpg" alt="">
+					<p class="storage__name">Lamborghini Huracan LP510-4</p>
+					<p class="storage__price">2385 USD / сутки</p>
+					<button class="btn btn__hover" id="book" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Aston Martin V12 Zagato.jpg" alt="">
+					<p class="storage__name">Aston Martin V12 Zagato</p>
+					<p class="storage__price">1110 USD / сутки</p>
+					<button class="btn btn__hover" id="book" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/BMW i8 Roadster.jpg" alt="">
+					<p class="storage__name">Bentley Continental GT 2020</p>
+					<p class="storage__price">1295 USD / сутки</p>
+					<button class="btn btn__hover" id="book" id="book">Забронировать</button>
+				</div>
+			</div>
+
+			<div class="storage__container">
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Jaguar F-Type R Coupe 2001.jpg" alt="">
+					<p class="storage__name">Jaguar F-Type R Coupe 2001</p>
+					<p class="storage__price">690 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Ferrari F8 Tributo.jpg" alt="">
+					<p class="storage__name">Ferrari F8 Tributo</p>
+					<p class="storage__price">1400 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Audi R8 V10 RWD Coupe 2020.jpg" alt="">
+					<p class="storage__name">Audi R8 V10 RWD Coupe 2020</p>
+					<p class="storage__price">875 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+			</div>
+
+			<div class="storage__container">
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Mercedes SLS AMG Roadster.jpg" alt="">
+					<p class="storage__name">Mercedes SLS AMG Roadster</p>
+					<p class="storage__price">880 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/Mercedes-AMG GT.jpg" alt="">
+					<p class="storage__name">Mercedes-AMG GT</p>
+					<p class="storage__price">925 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+				<div class="storage__item">
+					<img class="storage__img" src="img/cars/BMW Z8.jpg" alt="">
+					<p class="storage__name">BMW Z8</p>
+					<p class="storage__price">430 USD / сутки</p>
+					<button class="btn btn__hover" id="book">Забронировать</button>
+				</div>
+			</div>
+
+			<button class="btn btn__quest">Задать вопрос</button>
+		</div>
+	</section>
+
+
+	<section class="section section__accord" id="rules">
+		<h2 class="section__title">Условия аренды <i class="fas fa-clipboard-list"></i></h2>
+		<div class="accord">
+			
+			<div class="accord__box">
+				<div class="accord__title">Необходимые документы</div>
+				<div class="accord__content">
+					<p><i class="far fa-check-circle"></i> Паспорт или вид на жительство</p>
+					<p><i class="far fa-check-circle"></i> Водительское удостоверение (стаж вождения не менее 2 лет)</p>
+					<p><i class="far fa-check-circle"></i> Международные водительские права</p>
+					<p><i class="far fa-check-circle"></i> Страховка</p>
+				</div>
+			</div>
+
+			<div class="accord__box">
+				<div class="accord__title">Оплата аренды</div>
+				<div class="accord__content">
+					<p><i class="far fa-check-circle"></i>
+					 Оплата аренды автомобиля осуществляется до начала аренды
+					 автомобиля наличным или безналичным способом. Продлить срок аренды автомобиля можно заранее 
+					 предупредив менеджера.
+					</p>
+					<p><i class="far fa-check-circle"></i> Принимаются карты visa, mastercard, а так же bitcoin-платежи </p>
+					<p><i class="far fa-check-circle"></i> Необходимо иметь остаток на карте не менее 700$ для внесения залога </p>
+				</div>
+			</div>
+
+			<div class="accord__box">
+				<div class="accord__title">Нештатные ситуации / ограничения</div>
+				<div class="accord__content">
+					<p><i class="far fa-check-circle"></i> При возникновении ДТП или  нештатных ситуаций(угон,неисправность
+						авто) арендатор обязан уведомить о проишествии менеджера
+						по номеру 291839283
+					</p>
+					<p><i class="far fa-check-circle"></i>
+						Помните, что курение в салоне автомобиля запрещено
+					</p>
+					<p><i class="far fa-check-circle"></i>
+						В случае ДТП, если автомобиль не застрахован, все затраты на ремонт будут взысканы с клиента 
+					</p>
+				</div>
+			</div>
+
+			<div class="accord__box">
+				<div class="accord__title">Общая информация</div>
+				<div class="accord__content">
+					<p><i class="far fa-check-circle"></i> Внимательно прочтите договор об аренде, во извебжание недоразумений</p>
+					<p><i class="far fa-check-circle"></i> Прежде чем покинуть автосалон, проверьте, не поврежден ли автомобиль,
+						все ли работает исправно. Если имеются какие-либо проблемы, убедитесь,
+						что это было зафиксировано в договоре
+					</p>
+					<p><i class="far fa-check-circle"></i> На любые вопросы Вам всегда ответит наш менеджер, не стесняйтесь их задавать <i class="far fa-smile-wink"></i> </p>
+				</div>
+			</div>
+
+			<div class="accord__box">
+				<div class="accord__title">Рекомендации</div>
+				<div class="accord__content">
+					<p><i class="far fa-check-circle"></i> Ознакомьтесь с особенностями ПДД страны</p>
+					<p><i class="far fa-check-circle"></i> Ни в коем случае не оставляйте ценные вещи в автомобиле на ночь или на
+						длительный промежуток времени! Используйте только частые гаражи или 
+						платную стоянку с дежурным парковщиком. Не паркуйтесь на улице или на
+						необслуживаемой автостоянке
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<div class="sponsors">
+		<div class="sponsors__container">
+			<div class="sponsors__block">
+				<div class="sponsors__img"><img src="img/sponsors/merc-logo.png" alt="Mercedes"></div>
+				<div class="sponsors__img"><img src="img/sponsors/ferrari_logo.png" alt="Ferrari"></div>
+				<div class="sponsors__img"><img src="img/sponsors/bmw-logo.png" alt="BMW"></div>
+				<div class="sponsors__img"><img src="img/sponsors/lamborghini-logo.png" alt="Lamborghini"></div>
+				<div class="sponsors__img"><img src="img/sponsors/audi-logo.png" alt="Audi"></div>
+				<div class="sponsors__img"><img src="img/sponsors/tesla-logo.png" alt="Tesla"></div>
+			</div>
+			<div class="sponsors__block">
+				<div class="sponsors__img"><img src="img/sponsors/lexus-logo.png" alt="Lexus"></div>
+				<div class="sponsors__img"><img src="img/sponsors/bugatti-logo.png" alt="Bugatti"></div>
+				<div class="sponsors__img"><img src="img/sponsors/aston-martin-logo.png" alt="Aston"></div>
+				<div class="sponsors__img"><img src="img/sponsors/ford-logo.png" alt="Ford"></div>
+				<div class="sponsors__img"><img src="img/sponsors/Porsche-Logo.png" alt="Porsche"></div>
+				<div class="sponsors__img"><img src="img/sponsors/bentley-logo.png" alt="Bentley"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<section class="section section__contact" id="contact">
+		<div class="contact">
+			<div class="contact__content">
+				<h4 class="contact__title">Забронировать автомобиль и уточнить детали вы можете:</h4>
+				<div class="contact__desc">
+					<ul>
+						<li class="contact__item"><i class="fas fa-thumbtack"></i> по телефону +39 343 77213300</li>
+						<li class="contact__item"><i class="fas fa-thumbtack"></i> по электронной почте: rentcaritaly@gmail.com</li>
+						<li class="contact__item"><i class="fas fa-thumbtack"></i> заказав обратный звонок, заполнив форму</li>
+					</ul>
+				</div>
+				<div class="contact__form">
+					<input class="contact__input" type="text" placeholder="Ваше имя">
+					<input class="contact__input" type="text" placeholder="Ваш номер телефона">
+					<button class="btn btn__contact" type="submit" id="refresh">Отправить</button>
+				</div>
+				<div class="contact__payment">
+					<img src="img/visa.png" alt="">
+					<img src="img/mastercard.png" alt="">
+					<img src="img/btc.png" alt="">
+				</div>
+			</div>
+			<div class="contact__map">
+				<h4 class="contact__title">Мы на карте</h4>
+				<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1851.9139058728374!2d12.299332458267322!3d42.628678068250494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDM3JzQzLjIiTiAxMsKwMTgnMDEuNSJF!5e1!3m2!1sru!2sby!4v1628599458897!5m2!1sru!2sby" loading="lazy"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="footer">
+		&copy;Copyright 2021 Motors Mutual
+	</footer>
+	
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="javascript/main.js"></script>
+</body>
+</html>
